@@ -1,3 +1,5 @@
+-- Last of Client's height
+
 USE openmrs;
 SELECT DISTINCT(a.`identifier`) 'PEPID', a.`patient_id`, b.`value_numeric` 'List_Of_Clients_Height(cm)', b.`date_created` 'Clinic Visit Date'
 FROM `patient_identifier` a

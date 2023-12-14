@@ -1,0 +1,5 @@
+USE openmrs;
+SELECT DISTINCT(a.`identifier`) 'PEPID', a.`patient_id`, b.`value_numeric` 'List_Of_Clients_Height(cm)', b.`date_created` 'Clinic Visit Date'
+FROM `patient_identifier` a
+LEFT JOIN `obs` b ON a.`patient_id`=b.`person_id`
+WHERE a.`identifier_type`=4 AND b.`concept_id`=5090;

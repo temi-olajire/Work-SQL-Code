@@ -1,3 +1,5 @@
+-- from `inv_consumption` where and consumption_date between @Startdate and @Enddate;
+
 SET @Startdate := '2022-09-01';
 SET @Enddate := '2022-10-31';
 
@@ -10,4 +12,3 @@ WHERE item_id = 2 AND consumption_date BETWEEN @Startdate AND @Enddate) AS Total
 WHERE item_id = 3 AND consumption_date BETWEEN @Startdate AND @Enddate) AS Total_Stat_Pak, 
 (SELECT SUM(quantity) AS Total_Asante_Consumed FROM inv_consumption 
 WHERE item_id IN (96,97) AND consumption_date BETWEEN @Startdate AND @Enddate) AS Total_Asante;
--- from `inv_consumption` where and consumption_date between @Startdate and @Enddate;

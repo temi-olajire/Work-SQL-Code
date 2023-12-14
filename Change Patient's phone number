@@ -1,0 +1,2 @@
+UPDATE `person_attribute`
+SET `value`='phonenumber' WHERE `person_id`=x;
